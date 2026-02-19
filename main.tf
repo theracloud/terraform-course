@@ -45,6 +45,7 @@ output "instance_public_ip" {
 =======
   tags = {
     Name = "my-first-ubuntu-server"
+    Env = "dev"
   }
 }
 
