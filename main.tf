@@ -5,6 +5,7 @@ provider "aws" {
 resource "aws_instance" "ubuntu-2204" {
   ami           = "ami-074dd8e8dac7651a5"
   instance_type = "t3.micro"
+<<<<<<< HEAD
   vpc_security_group_ids = [aws_security_group.web-sg.id] 
   user_data                   = <<-EOF
     #!/bin/bash
@@ -41,4 +42,11 @@ output "instance_public_ip" {
   description = "IP publique de l'instance EC2"
   value       = aws_instance.ubuntu-2204.public_ip
 }
+=======
+  tags = {
+    Name = "my-first-ubuntu-server"
+  }
+}
+
+>>>>>>> 5f55a51 (First commit)
 
